@@ -6,4 +6,4 @@ const router = Router();
 router.get('/cars', carscontroller.getCars)
 router.post('/car', carscontroller.postCar)
 
-module.exports.router;
+module.exports = router

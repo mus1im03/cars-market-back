@@ -12,6 +12,7 @@ app.use('/public/img', express.static(path.resolve(__dirname, 'public', 'img')))
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(require("./routes/offer.route"))
 
 
 const { PORT, MONGO_SERVER } = process.env;
