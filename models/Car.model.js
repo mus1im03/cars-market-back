@@ -8,9 +8,10 @@ const carSchema = mongoose.Schema({
     price: String,
     mileage: Number,
     owner: Number,
-    
     transmission: String,
     drive_unit: Number,
+    color: String,
+    interior_color: String,
   },
   engine: {
     working_volume: Number,
