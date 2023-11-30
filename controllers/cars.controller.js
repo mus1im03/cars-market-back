@@ -1,6 +1,6 @@
-const Car = require("../models/Film.model");
+const Car = require("../models/Car.model");
 
-module.exports.carscontroller = {
+module.exports.carsController = {
     getCars: async (req, res) => {
         const car = await Car.find();
     
@@ -33,6 +33,8 @@ module.exports.carscontroller = {
             ground_clearance,
             unladen_weight,
             permissible_total,
+            color,
+            interior_color,
 
 
         } = req.body;
@@ -63,6 +65,8 @@ module.exports.carscontroller = {
             ground_clearance,
             unladen_weight,
             permissible_total,
+            color,
+            interior_color,
           });
           await res.json(car);
         } catch (e) {
