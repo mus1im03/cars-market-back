@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(require("./routes/cars.route"));
 app.use(require("./routes/categories.route"));
+app.use(require('./routes/service.route'))
 
 const { PORT, MONGO_SERVER } = process.env;
 
