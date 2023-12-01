@@ -8,15 +8,11 @@ module.exports.categoriesController = {
   },
 
   postCategory: async (req, res) => {
-    const { name, img, description, price, engineType } = req.body;
+    const { title } = req.body;
 
     try {
       const category = await Category.create({
-        name,
-        img,
-        description,
-        price,
-        engineType,
+        title,
       });
       await res.json(category);
     } catch (e) {

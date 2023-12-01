@@ -7,4 +7,4 @@ router.get("/cars", carsController.getCars);
 router.post("/car", carsController.postCar);
 
 
-module.exports = router
+module.exports = router;
