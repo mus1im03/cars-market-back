@@ -3,44 +3,45 @@ const mongoose = require("mongoose");
 const carSchema = mongoose.Schema({
   cars_info: {
     image: [String],
-    name: String,
-    year: Number,
-    price: String,
-    mileage: Number,
-    owner: Number,
-    
-    transmission: String,
-    drive_unit: Number,
+    name: {type:String, required: true},
+    year: {type:Number, required: true},
+    price: {type:String, required: true},
+    mileage: {type:String, required: true},
+    owners: {type:Number, required: true},
+    transmission: {type:String, required: true},
+    drive_unit: {type:String, required: true},
+    color: {type:String, required: true},
+    interior_color: {type:String, required: true},
   },
   engine: {
-    working_volume: Number,
-    maximum_torque: Number,
-    maximum_power: Number,
-    number_of_cylinders: Number,
+    working_volume: {type:Number, required: true},
+    maximum_torque: {type:String, required: true},
+    maximum_power: {type:String, required: true},
+    number_of_cylinders: {type:String, required: true},
   },
 
   driving_performance: {
-    maximum_speed: Number,
-    acceleration_time: Number,
+    maximum_speed: {type:Number, required: true},
+    acceleration_time: {type:Number, required: true},
   },
 
   fuel_consuption: {
-    combined_cycle: Number,
-    extra_urban_cycle: Number,
-    urban_cycle: Number,
-    co2_emissions: Number,
+    combined_cycle: {type:Number, required: true},
+    extra_urban_cycle: {type:Number, required: true},
+    urban_cycle: {type:Number, required: true},
+    co2_emissions: {type:Number, required: true},
   },
 
   dimensions: {
-    length_mm: Number,
-    height_mm: Number,
-    width_mm: Number,
-    ground_clearance: Number,
+    length_mm: {type:Number, required: true},
+    height_mm: {type:Number, required: true},
+    width_mm: {type:Number, required: true},
+    ground_clearance: {type:Number, required: true},
   },
 
   weight: {
-    unladen_weight: Number,
-    permissible_total: Number,
+    unladen_weight: {type:Number, required: true},
+    permissible_total: {type:Number, required: true},
   },
 });
 
