@@ -7,6 +7,10 @@ const carConstruktorSchema = mongoose.Schema({
     img: [String],
     titleImg: String,
     powerReserve: String,
+    categoryId: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "Category",
+      }
 })
 
 const CarConstruktor = mongoose.model("CarConstruktor", carConstruktorSchema);

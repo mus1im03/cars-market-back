@@ -8,7 +8,7 @@ module.exports.carConstruktorController = {
   },
 
   postCarKonstruktor: async (req, res) => {
-    const { name, mpower, description, engineType, img, titleImg, powerReserve } =
+    const { name, mpower, description, engineType, img, titleImg, powerReserve, categoryId } =
       req.body;
 
     try {
@@ -20,6 +20,7 @@ module.exports.carConstruktorController = {
         titleImg,
         mpower,
         powerReserve,
+        categoryId,
       });
       await res.json(konstruktor);
     } catch (e) {
