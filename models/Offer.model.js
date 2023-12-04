@@ -6,6 +6,6 @@ const offerSchema = mongoose.Schema({
     phone: String
 })
 
-const Offer = mongoose.model("User", offerSchema);
+const Offer = mongoose.model("Offer", offerSchema);
 
 module.exports = Offer;
