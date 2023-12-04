@@ -1,6 +1,6 @@
-const Car = require("../models/Film.model");
+const Car = require("../models/Car.model");
 
-module.exports.carscontroller = {
+module.exports.carsController = {
     getCars: async (req, res) => {
         const car = await Car.find();
     
