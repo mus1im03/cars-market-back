@@ -18,13 +18,14 @@ module.exports.offersController = {
 
   postOffer: async (req, res) => {
     try {
-      const { name, surname, phone } = req.body;
+      const {carId, name, surname, phone, gender } = req.body;
+      console.log(phone);
 
-      if (!isValidPhoneNumber(phone)) {
-        return res.status(400).json({ error: 'Неверный формат номера телефона' });
-      }
+      // if (!isValidPhoneNumber(phone)) {
+      //   return res.status(400).json({ error: 'Неверный формат номера телефона' });
+      // }
 
-      const newOffer = await Offer.create({ name, surname, phone });
+      const newOffer = await Offer.create({ name, surname, phone, carId, gender});
 
       return res.status(201).send(newOffer);
     } catch (error) {
