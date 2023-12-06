@@ -8,8 +8,25 @@ module.exports.carConstruktorController = {
   },
 
   postCarKonstruktor: async (req, res) => {
-    const { name, mpower, description, engineType, img, titleImg, powerReserve, categoryId } =
-      req.body;
+    const {
+      name,
+      mpower,
+      h_p,
+      description,
+      engineType,
+      img,
+      titleImg,
+      powerReserve,
+      categoryId,
+      car_color_img,
+      car_colors,
+      car_steels,
+      car_steels_img,
+      car_interer,
+      car_interer_img,
+      car_decor,
+      car_decor_img,
+    } = req.body;
 
     try {
       const konstruktor = await CarConstruktor.create({
@@ -21,6 +38,15 @@ module.exports.carConstruktorController = {
         mpower,
         powerReserve,
         categoryId,
+        h_p,
+        car_color_img,
+        car_colors,
+        car_steels,
+        car_steels_img,
+        car_interer,
+        car_interer_img,
+        car_decor,
+        car_decor_img,
       });
       await res.json(konstruktor);
     } catch (e) {
